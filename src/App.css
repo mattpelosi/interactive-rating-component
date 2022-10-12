@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  font-family: 'Overpass', 'sans serif';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background-color: hsl(213, 19%, 18%);
+  padding: 20px;
+  width: 375px;
+  border-radius: 24px;
+}
+
+.thankyou-container {
+  background-color: hsl(213, 19%, 18%);
+  padding: 20px;
+  width: 375px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rounded-background {
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+img {
+  padding: 10px;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+
+p {
+  color: hsl(216, 12%, 54%);
+  font-size: 15px;
+}
+
+.rating-selection {
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 100px;
+  color:hsl(25, 97%, 53%);
+  padding: 10px;
+}
+
+.thankyou-container p {
+ text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.rating-button {
+  border: none;
+  position: relative;
+  top: 2px;
+  color: inherit;
+  height: 40px;
+  width: 40px;
+  color: hsl(216, 12%, 54%);
+}
+
+.rating-button:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.rating-button:hover.selected {
+  background-color: hsl(25, 97%, 53%);
+}
+
+.rating-button:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.submit-button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  width: 100%;
+  height: 35px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.submit-button:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.selected {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+
+.thankyou-message {
+  margin-top: 0;
+}
+
+@media (max-width: 375px) {
+  #root {
+    padding: 20px;
   }
 }
